@@ -6,11 +6,11 @@ app.get("/source", (req, res) => {
   const data = [
     {
       id: "1",
-      src: "src/assets/video/Shadow of the Sun (cover).mp4",
+      src: "/videos/Shadow of the Sun (cover).mp4",
     },
     {
       id: "2",
-      src: "src/assets/video//videos/Shadow of the Sun 翻唱 完整版.mp4",
+      src: "/videos/Shadow of the Sun 翻唱 完整版.mp4",
     },
   ];
   res.send(data);
