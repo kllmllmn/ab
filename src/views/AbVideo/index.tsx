@@ -2,16 +2,19 @@
 import { baseURL } from "../../utils/getAbsoluteUrl";
 import { JolPlayer } from "jol-player";
 import { useLocation } from "react-router-dom";
+// TODO 共享state
 import { useEffect, useState } from "react";
 
 // 定义接口，限制获取的后台videoSource数据的类型
 interface videoSource {
   id: string;
   src: string;
+  title: string;
 }
 
 export default () => {
   let location = useLocation();
+
   const [source, setSource] = useState([]);
   const getData = async () => {
     const res = await fetch("http://localhost:3010/source");
@@ -19,7 +22,6 @@ export default () => {
     // console.log(data);
     setSource(data);
   };
-
   useEffect(() => {
     console.log(location);
     // fetch("http://localhost:3010/source")

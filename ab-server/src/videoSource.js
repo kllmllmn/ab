@@ -7,10 +7,12 @@ app.get("/source", (req, res) => {
     {
       id: "1",
       src: "/videos/Shadow of the Sun (cover).mp4",
+      title: "Shadow of the Sun (cover)",
     },
     {
       id: "2",
       src: "/videos/Shadow of the Sun 翻唱 完整版.mp4",
+      title: "Shadow of the Sun 翻唱 完整版",
     },
   ];
   res.send(data);
