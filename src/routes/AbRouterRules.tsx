@@ -32,7 +32,7 @@ export default () => {
             <Route path="/fire/article" element={<AbFireArticle />}></Route>
             <Route path="/fire/video" element={<AbFireVideo />}></Route>
           </Route>
-          <Route path="/video" element={<AbVideo />}></Route>
+          <Route path="/video/:title" element={<AbVideo />}></Route>
           <Route path="/user" element={<AbUser />}></Route>
         </Route>
         <Route path="*" element={<NotFound />}></Route>
