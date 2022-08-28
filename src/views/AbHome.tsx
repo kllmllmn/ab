@@ -1,7 +1,8 @@
 import { Carousel, Card, Col, Row } from "antd";
+import { nanoid } from "nanoid";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { toAbsoluteUrl } from "../utils/getAbsoluteUrl";
+// import { toAbsoluteUrl } from "../utils/getAbsoluteUrl";
 import ImgCard from "../components/ImgCard";
 const { Meta } = Card;
 
@@ -38,7 +39,7 @@ export default () => {
       <div className="site-card-wrapper">
         <Row gutter={16}>
           {arr.map((i: any) => (
-            <ImgCard></ImgCard>
+            <ImgCard key={nanoid()}></ImgCard>
           ))}
         </Row>
       </div>
